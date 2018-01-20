@@ -1,19 +1,25 @@
 provider:
   name: faas
-  gateway: http://localhost:8080
+  gateway: http://128.110.153.209:8080
 
 functions:
   fn-a:
     lang: python
     handler: ./fn-a
-    image: fn-a
+    image: sonika/fn-a
+    environment:
+      write_debug: true
 
   fn-b:
     lang: python
     handler: ./fn-b
-    image: fn-b
+    image: sonika/fn-b
+    environment:
+      write_debug: true
 
   service1:
     lang: python
     handler: ./service1
-    image: service1
+    image: sonika/service1
+    environment:
+      write_debug: true
