@@ -1,0 +1,19 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  fn-a:
+    lang: python
+    handler: ./fn-a
+    image: fn-a
+
+  fn-b:
+    lang: python
+    handler: ./fn-b
+    image: fn-b
+
+  service1:
+    lang: python
+    handler: ./service1
+    image: service1
